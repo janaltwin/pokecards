@@ -9,7 +9,7 @@ const PokeInfo = ({data}) => {
       {
         (!data) ? <div className='mb-10 w-96'><img src={pokemon} alt=""/></div>:(
           <>
-          <div class="relative p-4 bg-card shadow-md w-1/2 h-3/4 mb-2 rounded-sm ring-amber-300 ring-8 font-roboto text-black">
+          <div class="relative p-4 bg-card shadow-md w-1/2 h-3/4 mb-2 rounded-sm ring-[#F4E274] ring-8 font-roboto text-black">
             <div className='uppercase flex justify-between font-black px-2 mb-1'>
               <h3 className='mb-1'>{data.name}</h3>
               <h3 className="flex"><span className='border-3 rounded-full bg-cyan-400 mb-1'><DiCodeigniter size={25} color='blue'/></span>{data.base_experience}</h3>
@@ -30,24 +30,24 @@ const PokeInfo = ({data}) => {
                             }
                 </span>
                   <span class="font-bold flex justify-center gap-2 text-center capitalize mt-4">Abilities: {
-                              data.abilities.map(pokemon=>{
-                                    return(
-                                        <div>
-                                            <h2>{pokemon.id}{pokemon.ability.name}</h2>
-                                        </div>
-                                    )
-                                })
-                            }
-                    </span>
+                    data.abilities.map(pokemon=>{
+                          return(
+                              <div>
+                                  <h2>{pokemon.id}{pokemon.ability.name}</h2>
+                              </div>
+                          )
+                      })
+                  }
+                  </span>
                     <span class="font-bold gap-2 text-center capitalize grid justify-center grid-cols-2 mt-6 pt-4">{
-                              data.stats.map(pokemon=>{
-                                return(
-                                    <>
-                                        <h3>{pokemon.stat.name}:{pokemon.base_stat}</h3>
-                                    </>
-                                )
-                            })
-                            }
+                      data.stats.map(pokemon=>{
+                        return(
+                            <>
+                                <h3>{pokemon.stat.name}:{pokemon.base_stat}</h3>
+                            </>
+                        )
+                    })
+                    }
                     </span>
                 </div>
             </div>

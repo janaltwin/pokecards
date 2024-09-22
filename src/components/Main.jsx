@@ -11,7 +11,6 @@ const Main = () => {
   const [prevUrl,setPrevUrl]=useState()
   const [pokeDex,setPokeDex]=useState()
 
-
   const getPokemon=async(res)=>{
     res.map(async(item)=>{
         const result=await axios.get(item.url)
