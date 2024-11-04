@@ -12,7 +12,7 @@ const Header = () => {
         <div className='font-roboto flex content-center justify-center py-4 text-3xl list-none mx-8 px-6 gap-6'>
             <li><a href="App.js">Home</a></li>
             <li><a href="About.jsx">About</a></li>
-            <li><a href="App.js">Contact</a></li>
+            <li><a href="https://janaltwinp-6a487.web.app/">Contact</a></li>
         </div>
     </div>
   )
